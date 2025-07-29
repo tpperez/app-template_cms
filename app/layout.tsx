@@ -2,8 +2,6 @@ import { Roboto } from 'next/font/google'
 
 import type { Metadata } from 'next'
 
-import FooterContainer from '@/app/components/structure/footer'
-import HeaderContainer from '@/app/components/structure/header'
 import { LANGUAGE } from '@/app/constants/config'
 import { HttpProvider } from '@/app/services/http'
 import ILayout from '@/app/types/layout'
@@ -31,11 +29,7 @@ const LayoutRoot = ({ children }: ILayout) => {
         className={`${roboto.variable} font-roboto antialiased`}
         suppressHydrationWarning={true}
       >
-        <HttpProvider>
-          <HeaderContainer />
-          {children}
-          <FooterContainer />
-        </HttpProvider>
+        <HttpProvider>{children}</HttpProvider>
       </body>
     </html>
   )
