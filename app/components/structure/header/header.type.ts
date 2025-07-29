@@ -1,0 +1,18 @@
+export interface IHeaderProps {
+  data: IHeaderData
+}
+
+export interface IHeaderData {
+  logo: {
+    alt: string
+    url: string
+    title: string
+  }
+  menulinks: IMenuLink[]
+}
+
+export interface IMenuLink {
+  id: string
+  label: string
+  url: string
+}
