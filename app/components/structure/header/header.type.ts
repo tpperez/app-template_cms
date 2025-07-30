@@ -3,12 +3,8 @@ export interface IHeaderProps {
 }
 
 export interface IHeaderData {
-  logo: {
-    alt: string
-    url: string
-    title: string
-  }
-  menulinks: IMenuLink[]
+  siteName: string
+  menuItems: IMenuLink[]
 }
 
 export interface IMenuLink {
