@@ -2,40 +2,36 @@
 
 import { useState } from 'react'
 
-import Link from 'next/link'
-
 import Logo from '@/app/components/ui/logo'
+import { INavLink } from '@/app/types/nav-link'
 
-import type { IHeaderProps } from './header.type'
+import { IHeaderData } from './header.type'
 
-const Header = ({ data }: IHeaderProps) => {
+const Header = ({ data }: IHeaderData) => {
+  const { links } = data
+
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
     <header className='sticky top-0 z-50 bg-white/90 shadow-sm backdrop-blur-md'>
       <div className='mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between py-4'>
-          <Logo
-            variant='dark'
-            text={data.siteName}
-          />
+          <Logo variant='dark' />
 
-          {/* desktop navigation */}
           <nav className='hidden space-x-8 lg:flex'>
-            {data.menuItems.map((item) => {
+            {links.map((link: INavLink) => {
               return (
-                <Link
-                  key={item.id}
-                  href={item.url}
+                <a
+                  key={link.id}
+                  href={link.href}
                   className='text-gray-600 transition-colors hover:text-gray-900'
                 >
-                  {item.label}
-                </Link>
+                  {link.text}
+                </a>
               )
             })}
           </nav>
 
-          {/* mobile menu button */}
           <button
             className='text-gray-600 lg:hidden'
             onClick={() => {
@@ -63,25 +59,30 @@ const Header = ({ data }: IHeaderProps) => {
         </div>
       </div>
 
-      {/* mobile menu */}
       {isMenuOpen && (
         <div className='border-b border-gray-200 bg-white/90 py-4 shadow-lg backdrop-blur-md lg:hidden'>
           <div className='mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
             <nav className='flex flex-col space-y-4'>
-              {data.menuItems.map((item) => {
-                return (
-                  <Link
-                    key={item.id}
-                    href={item.url}
-                    className='text-gray-600 transition-colors hover:text-gray-900'
-                    onClick={() => {
-                      return setIsMenuOpen(false)
-                    }}
-                  >
-                    {item.label}
-                  </Link>
-                )
-              })}
+              <ul>
+                {links.map((link: INavLink) => {
+                  return (
+                    <li
+                      key={link.id}
+                      className='my-2'
+                    >
+                      <a
+                        href={link.href}
+                        className='text-gray-600 transition-colors hover:text-gray-900'
+                        onClick={() => {
+                          return setIsMenuOpen(false)
+                        }}
+                      >
+                        {link.text}
+                      </a>
+                    </li>
+                  )
+                })}
+              </ul>
             </nav>
           </div>
         </div>

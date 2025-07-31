@@ -1,32 +1,17 @@
+import { IBenefitsProps } from './components/benefits/benefits.type'
+import { IGetStartedProps } from './components/get-started/get-started.type'
+import { IHeroProps } from './components/hero/hero.type'
+import { IStackProps } from './components/stack/stack.type'
+import { IStatsProps } from './components/stats/stats.type'
+
+export interface IHomeViewData {
+  data: IHomeViewProps
+}
+
 export interface IHomeViewProps {
-  data: IHomeData
-}
-
-export interface IHomeData {
-  sectionone: ICardSection
-  sectiontwo: IContentSection
-  sectionthree: ICardSection
-}
-
-export interface ICardSection {
-  title: string
-  description: string
-  items: ICardItem[]
-}
-
-export interface ICardItem {
-  id: string
-  title: string
-  description: string
-  image: {
-    url: string
-  }
-}
-
-export interface IContentSection {
-  title: string
-  description: string
-  image: {
-    url: string
-  }
+  hero: IHeroProps
+  stats: IStatsProps
+  stack: IStackProps
+  benefits: IBenefitsProps
+  getStarted: IGetStartedProps
 }

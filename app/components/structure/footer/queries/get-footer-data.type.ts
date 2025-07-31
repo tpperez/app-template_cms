@@ -1,5 +1,5 @@
-import { IFooterData } from '@/app/components/structure/footer'
+import { IFooterProps } from '@/app/components/structure/footer'
 
 export interface IFooterDataResponse {
-  footer: IFooterData
+  footer: IFooterProps
 }

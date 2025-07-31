@@ -1,12 +1,17 @@
 export const FOOTER_DATA_QUERY = `
-{
-  footer {
-    copyrighttext
-    footerlinks {
-      id
-      label
-      url
+  {
+    footer {
+      text
+      copyrightText
+      sectionLink {
+        id
+        title
+        links {
+          id
+          text
+          href
+        }
+      }
     }
   }
-}
 `

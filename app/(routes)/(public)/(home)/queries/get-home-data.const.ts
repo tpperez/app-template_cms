@@ -1,37 +1,60 @@
 export const HOME_DATA_QUERY = `
-{
-  home {
-    sectionone {
-      title
-      description
-      items {
-        id
+  {
+    home {
+      hero {
         title
         description
-        image {
-          url
+      }
+      stats {
+        items {
+          id
+          title
+          subtitle
         }
       }
-    }
-    sectiontwo {
-      title
-      description
-      image {
-        url
-      }
-    }
-    sectionthree {
-      title
-      description
-      items {
-        id
+      stack {
         title
         description
-        image {
-          url
+        items {
+          id
+          image {
+            alt
+            url
+            height
+            width
+          }
+          title
+          list {
+            items {
+              id
+              label
+            }
+          }
+        }
+      }
+      benefits {
+        title
+        description
+        items {
+          image {
+            alt
+            url
+            height
+            width
+          }
+          id
+          title
+          description
+        }
+      }
+      getStarted {
+        title
+        description
+        commands {
+          id
+          command
         }
       }
     }
   }
-}
 `

@@ -1,14 +1,9 @@
-export interface IHeaderProps {
-  data: IHeaderData
-}
+import { INavLink } from '@/app/types/nav-link'
 
 export interface IHeaderData {
-  siteName: string
-  menuItems: IMenuLink[]
+  data: IHeaderProps
 }
 
-export interface IMenuLink {
-  id: string
-  label: string
-  url: string
+export interface IHeaderProps {
+  links: INavLink[]
 }

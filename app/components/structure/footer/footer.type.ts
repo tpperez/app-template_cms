@@ -1,14 +1,17 @@
-export interface IFooterProps {
-  data: IFooterData
-}
+import { INavLink } from '@/app/types/nav-link'
 
 export interface IFooterData {
-  copyrighttext: string
-  footerlinks: IFooterLink[]
+  data: IFooterProps
 }
 
-export interface IFooterLink {
+export interface IFooterProps {
+  text: string
+  copyrightText: string
+  sectionLink: IFooterSectionLink[]
+}
+
+export interface IFooterSectionLink {
   id: string
-  label: string
-  url: string
+  title: string
+  links: INavLink[]
 }

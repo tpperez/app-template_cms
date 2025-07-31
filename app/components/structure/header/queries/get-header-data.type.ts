@@ -1,5 +1,5 @@
-import { IHeaderData } from '@/app/components/structure/header'
+import { IHeaderProps } from '@/app/components/structure/header'
 
 export interface IHeaderDataResponse {
-  header: IHeaderData
+  header: IHeaderProps
 }

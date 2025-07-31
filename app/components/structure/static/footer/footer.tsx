@@ -8,7 +8,6 @@ const Footer = () => {
           <div>
             <Logo
               variant='light'
-              text='App Template'
               className='mb-4'
             />
             <p className='text-gray-300'>

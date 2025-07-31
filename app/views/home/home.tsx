@@ -1,26 +1,20 @@
-import SectionWithCards from './components/section-with-cards'
-import SectionWithContent from './components/section-with-content'
-import SectionWithIcons from './components/section-with-icons'
-import type { IHomeViewProps } from './home.type'
+import Benefits from './components/benefits'
+import GetStarted from './components/get-started'
+import Hero from './components/hero'
+import Stack from './components/stack'
+import Stats from './components/stats'
+import type { IHomeViewData } from './home.type'
 
-const ViewHome = ({ data }: IHomeViewProps) => {
-  const { sectionone, sectiontwo, sectionthree } = data
+const ViewHome = ({ data }: IHomeViewData) => {
+  const { hero, stats, stack, benefits, getStarted } = data
 
   return (
     <>
-      <SectionWithContent {...sectiontwo} />
-
-      <SectionWithCards
-        title={sectionone.title}
-        description={sectionone.description}
-        items={sectionone.items}
-      />
-
-      <SectionWithIcons
-        title={sectionthree.title}
-        description={sectionthree.description}
-        items={sectionthree.items}
-      />
+      <Hero data={hero} />
+      <Stats data={stats} />
+      <Stack data={stack} />
+      <Benefits data={benefits} />
+      <GetStarted data={getStarted} />
     </>
   )
 }

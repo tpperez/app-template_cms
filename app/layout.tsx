@@ -1,4 +1,5 @@
 import { Roboto } from 'next/font/google'
+import { headers } from 'next/headers'
 
 import type { Metadata } from 'next'
 
@@ -22,9 +23,20 @@ export const metadata: Metadata = {
   description: 'Here you can find our defitions and examples.',
 }
 
-const LayoutRoot = ({ children }: ILayout) => {
+const LayoutRoot = async ({ children }: ILayout) => {
+  const headersList = headers()
+  const nonce = (await headersList).get('x-nonce') || undefined
+
   return (
     <html lang={LANGUAGE}>
+      <head>
+        {nonce && (
+          <meta
+            name='csp-nonce'
+            content={nonce}
+          />
+        )}
+      </head>
       <body
         className={`${roboto.variable} font-roboto antialiased`}
         suppressHydrationWarning={true}

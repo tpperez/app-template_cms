@@ -11,10 +11,7 @@ const Header = () => {
     <header className='sticky top-0 z-50 bg-white/90 shadow-sm backdrop-blur-md'>
       <div className='mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between py-4'>
-          <Logo
-            variant='dark'
-            text='App Template'
-          />
+          <Logo variant='dark' />
 
           <nav className='hidden space-x-8 lg:flex'>
             <a

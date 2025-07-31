@@ -19,7 +19,7 @@ const Stack = () => {
           <div className='group relative overflow-hidden rounded-2xl border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-8 shadow-lg transition-all duration-500 hover:border-gray-300 hover:shadow-2xl'>
             <div className='absolute -right-4 -top-4 flex h-24 w-24 rotate-[20deg] items-center justify-center rounded-full bg-gradient-to-br from-gray-400 to-gray-600 opacity-20 grayscale'>
               <span className='text-4xl transition-all duration-500 group-hover:scale-150 group-hover:opacity-100'>
-                ⚛️
+                ⚙
               </span>
             </div>
             <div className='relative'>
@@ -43,7 +43,7 @@ const Stack = () => {
           <div className='group relative overflow-hidden rounded-2xl border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-8 shadow-lg transition-all duration-500 hover:border-gray-300 hover:shadow-2xl'>
             <div className='absolute -right-4 -top-4 flex h-24 w-24 rotate-[20deg] items-center justify-center rounded-full bg-gradient-to-br from-gray-400 to-gray-600 opacity-20 grayscale'>
               <span className='text-4xl transition-all duration-500 group-hover:scale-150 group-hover:opacity-100'>
-                🗄️
+                🌎
               </span>
             </div>
             <div className='relative'>
@@ -89,7 +89,7 @@ const Stack = () => {
           <div className='group relative overflow-hidden rounded-2xl border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-8 shadow-lg transition-all duration-500 hover:border-gray-300 hover:shadow-2xl'>
             <div className='absolute -right-4 -top-4 flex h-24 w-24 rotate-[20deg] items-center justify-center rounded-full bg-gradient-to-br from-gray-400 to-gray-600 opacity-20 grayscale'>
               <span className='text-4xl transition-all duration-500 group-hover:scale-150 group-hover:opacity-100'>
-                🧪
+                🏆
               </span>
             </div>
             <div className='relative'>
@@ -110,17 +110,6 @@ const Stack = () => {
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-
-        <div className='mt-16 text-center'>
-          <div className='inline-flex items-center rounded-xl border border-gray-200 bg-gradient-to-r from-gray-50 to-white px-8 py-4 shadow-lg'>
-            <div className='mr-3 flex h-8 w-8 rotate-[20deg] items-center justify-center rounded-full bg-gradient-to-r from-gray-700 to-gray-800 grayscale'>
-              <span className='text-lg'>⚡</span>
-            </div>
-            <span className='font-medium text-gray-800'>
-              Stack optimized for better developer experience and productivity
-            </span>
           </div>
         </div>
       </div>
