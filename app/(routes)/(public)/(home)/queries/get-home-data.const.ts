@@ -2,7 +2,6 @@ export const HOME_DATA_QUERY = `
   {
     home {
       hero {
-        title
         description
       }
       stats {

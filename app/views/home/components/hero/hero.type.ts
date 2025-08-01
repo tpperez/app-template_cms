@@ -3,6 +3,5 @@ export interface IHeroData {
 }
 
 export interface IHeroProps {
-  title: string
   description: string
 }

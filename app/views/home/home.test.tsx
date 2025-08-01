@@ -49,7 +49,6 @@ vi.mock('./components/stats', () => {
 const mockData: IHomeViewData = {
   data: {
     hero: {
-      title: '',
       description: '',
     },
     stats: {

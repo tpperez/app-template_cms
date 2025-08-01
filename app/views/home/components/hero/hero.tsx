@@ -2,10 +2,12 @@
 
 import React, { useEffect, useState } from 'react'
 
+import { SITE_NAME } from '@/app/constants/config'
+
 import { IHeroData } from './hero.type'
 
 const Hero = ({ data }: IHeroData) => {
-  const { title, description } = data
+  const { description } = data
 
   const [typewriterText, setTypewriterText] = useState('')
   const [showCursor, setShowCursor] = useState(true)
@@ -19,7 +21,7 @@ const Hero = ({ data }: IHeroData) => {
         index++
       } else {
         clearInterval(timer)
-        // Cursor blink after typing is done
+
         setInterval(() => {
           setShowCursor((prev) => {
             return !prev
@@ -37,7 +39,7 @@ const Hero = ({ data }: IHeroData) => {
     <section className='bg-gradient-to-b from-white to-gray-100 px-4 py-20 sm:px-8 lg:px-10'>
       <div className='mx-auto max-w-4xl text-center'>
         <h1 className='mb-6 text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl'>
-          {title}
+          {SITE_NAME}
         </h1>
 
         <p className='mx-auto max-w-3xl text-lg text-gray-600 sm:text-xl'>

@@ -5,8 +5,6 @@ import { INavLink } from '../../../types/nav-link'
 import { IFooterData, IFooterSectionLink } from './footer.type'
 
 const Footer = ({ data }: IFooterData) => {
-  console.log(data)
-
   const { text, sectionLink, copyrightText } = data
 
   return (
