@@ -1,6 +1,5 @@
 import Logo from '@/app/components/ui/logo'
-
-import { INavLink } from '../../../types/nav-link'
+import { INavLink } from '@/app/types/nav-link'
 
 import { IFooterData, IFooterSectionLink } from './footer.type'
 

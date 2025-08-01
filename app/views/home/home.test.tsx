@@ -4,7 +4,6 @@ import { describe, expect, it, vi } from 'vitest'
 import ViewHome from './home'
 import type { IHomeViewData } from './home.type'
 
-// mock child components
 vi.mock('./components/benefits', () => {
   return {
     default: () => {
@@ -45,7 +44,6 @@ vi.mock('./components/stats', () => {
   }
 })
 
-// mock data
 const mockData: IHomeViewData = {
   data: {
     hero: {
@@ -76,7 +74,6 @@ describe('ViewHome', () => {
   it('should render all components', () => {
     render(<ViewHome {...mockData} />)
 
-    // check if all child components are rendered
     expect(screen.getByTestId('hero')).toBeInTheDocument()
     expect(screen.getByTestId('stats')).toBeInTheDocument()
     expect(screen.getByTestId('stack')).toBeInTheDocument()

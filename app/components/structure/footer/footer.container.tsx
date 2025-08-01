@@ -1,5 +1,5 @@
-import Footer from '../footer/footer'
-import getFooterData from '../footer/queries'
+import Footer from './footer'
+import getFooterData from './queries'
 
 const FooterContainer = async () => {
   const { success, data, error } = await getFooterData()

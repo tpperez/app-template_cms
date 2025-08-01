@@ -1,5 +1,5 @@
-import Header from '../header/header'
-import getHeaderData from '../header/queries'
+import Header from './header'
+import getHeaderData from './queries'
 
 const HeaderContainer = async () => {
   const { success, data, error } = await getHeaderData()
